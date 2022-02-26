@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tailwind.css">
+
+    <style>
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body class="bg-body text-white font-poppins pb-12 px-8 md:px-14 lg:px-20">
+
+    <!-- Nav Bar -->
+    <header id="home" class="py-8">
+        <div class="container flex gap-6 justify-between items-center mx-auto">
+            <div>
+                <a href="" class="text-lg font-semibold">Jonathan.eth</a>
+            </div>
+
+            <!-- Toggle -->
+            <div class="cursor-pointer md:hidden" id="burger">
+                <svg class="w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <!-- Links -->
+            <div id="menu" class="hidden md:flex gap-10 items-center">
+                <a href="#home" class="hidden md:block text-selected-text">Home</a>
+                <a href="#work" class="hidden md:block">My work</a>
+                <a href="#client" class="hidden md:block">Clients</a>
+                <a href="#hire" class="hidden md:block">
+                    <button class="bg-theme py-2 px-6 rounded-sm font-semibold">Hire me</button>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Section -->
+    <section id="home" class="container flex md:justify-between justify-center items-center mx-auto text-center">
+        <!-- Dots -->
+        <div class="hidden lg:flex flex-wrap md:flex-nowrap">
+            <nav class="hidden lg:inline-block lg:mr-24 lg:w-4 md:fixed left-percentage">
+                <div class="absolute left-50 transform -translate-x-1/2 space-y-5 -mt-36">
+                    <a href="#home"
+                        class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">
+                            Home
+                        </span>
+                    </a>
+                    <a href="#work" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">
+                            Work
+                        </span>
+                    </a>
+                    <a href="#client" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">
+                            Clients
+                        </span>
+                    </a>
+                    <a href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">
+                            Hire
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Text and button -->
+        <div class="flex flex-col flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36 items-center text-center">
+            <h2 class="font-bold text-4xl md:text-6xl lg:text-7xl text-center md:text-left">
+                Building<br> beautiful web experiences.
+            </h2>
+
+            <div class="flex justify-center md:justify-start w-full">
+                <button type="submit" class="bg-theme text-white font-bold md:px-8 px-5 md:py-4 py-3 flex items-center gap-3 md:mt-12 mt-10">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <span>
+                        View my Work
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <img src="https://source.unsplash.com/random/1077x1300/?gradient" alt="profile-pic" class="hidden md:w-5/12 md:h-auto md:block md:ml-3">
+
+    </section>
+
+
+    <!-- My Work -->
+    <section id="work" class="container mt-14 mx-auto px-5 md:px-10 lg:px-14 w-full">
+        <div class="w-full">
+            <h2 class="secondary-title">My work</h2>
+            <p class="secondary-paragraph">Iv'e had the pleasure of working with multiple Fortune 500 companies, implementing and destroying
+                both their frontend and backend.
+            </p>
+            <!-- Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                <img src="https://source.unsplash.com/random/1920x1080/?github" alt="github" class="max-w-full h-56">
+                <img src="https://source.unsplash.com/random/1920x1080/?coding" alt="coding" class="max-w-full h-56">
+                <img src="https://source.unsplash.com/random/1920x1080/?tech,conference" alt="tech,conference" class="max-w-full h-56">
+                <img src="https://source.unsplash.com/random/1920x1080/?meeting" alt="meeting" class="max-w-full h-56 hidden md:block">
+                <img src="https://source.unsplash.com/random/1920x1080/?coder" alt="coder" class="max-w-full h-56 hidden md:block">
+                <img src="https://source.unsplash.com/random/1920x1080/?macbook" alt="macbook" class="max-w-full h-56 hidden md:block">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- My Clients -->
+    <section id="client" class="container mt-24 mx-auto px-5 md:px-10 lg:px-14 w-full">
+        <div class="w-full">
+            <h2 id="client" class="secondary-title">Clients</h2>
+            <p class="secondary-paragraph">Iv'e had the pleasure of working with multiple Fortune 500 companies, implementing and destroying
+                both their frontend and backend.
+            </p>
+
+            <div class="flex flex-col items-start">
+                <li class="flex md:items-center items-start border-2 border-nav mb-8">
+                    <div class="hidden md:block px-10">
+                        <svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="mb-3 text-2xl font-semibold">Apple</h3>
+                        <div class="mb-3 flex md:items-center sm:flex-row flex-col items-start gap-2">
+                            <span class="badge">UI/UX</span>
+                            <span class="badge">Frontend Development</span>
+                        </div>
+                        <p>Iv'e had the pleasure of working with multiple Fortune 500 companies, implementing and
+                            destroying both their
+                            frontend and backend.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="flex md:items-center items-start border-2 border-nav mb-8">
+                    <div class="hidden md:block px-10">
+                        <svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="mb-3 text-2xl font-semibold">Apple</h3>
+                        <div class="mb-3 flex md:items-center sm:flex-row flex-col items-start gap-2">
+                            <span class="badge">UI/UX</span>
+                            <span class="badge">Frontend Development</span>
+                        </div>
+                        <p>Iv'e had the pleasure of working with multiple Fortune 500 companies, implementing and
+                            destroying both their
+                            frontend and backend.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="flex md:items-center items-start border-2 border-nav mb-8">
+                    <div class="hidden md:block px-10">
+                        <svg width="80" height="96" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66.6983 92.1599C61.5487 97.2095 55.867 96.4223 50.4513 94.0415C44.6936 91.6127 39.4299 91.4591 33.3492 94.0415C25.7767 97.3439 21.7577 96.3839 17.1972 92.1599C-8.55106 65.3759 -4.75058 24.5759 24.5131 23.0399C31.6105 23.4239 36.5796 27.0047 40.7601 27.3023C46.9739 26.0255 52.9216 22.3679 59.5724 22.8479C67.5629 23.5007 73.5392 26.6879 77.5297 32.4191C61.0926 42.4031 64.9881 64.2911 80.0855 70.4351C77.0641 78.4511 73.1876 86.3711 66.6888 92.2271L66.6983 92.1599ZM40.19 22.7519C39.4204 10.8479 48.9691 1.05595 59.9525 0.0959473C61.4632 13.8239 47.6009 24.0959 40.19 22.7519Z" fill="white">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="mb-3 text-2xl font-semibold">Apple</h3>
+                        <div class="mb-3 flex md:items-center sm:flex-row flex-col items-start gap-2">
+                            <span class="badge">UI/UX</span>
+                            <span class="badge">Frontend Development</span>
+                        </div>
+                        <p>Iv'e had the pleasure of working with multiple Fortune 500 companies, implementing and
+                            destroying both their
+                            frontend and backend.
+                        </p>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Hire me -->
+    <section id="hire" class="container mt-14 mx-auto px-5 md:px-10 lg:px-14 w-full">
+        <div class="w-full">
+            <h2 id="hire" class="secondary-title">Hire me</h2>
+            <p class="secondary-paragraph">Please contact me.</p>
+
+            <div class="flex md:flex-row flex-col justify-between">
+                <div class="flex flex-col md:w-9/12 w-full">
+                    <label class="block mb-1 text-xl font-bold">Name</label>
+                    <input class="mb-7 w-full border border-input-border bg-input py-1" type="text" name="name" id="name">
+
+                    <label class="block mb-1 text-xl font-bold">Email</label>
+                    <input class="mb-7 w-full border border-input-border bg-input py-1" type="text" name="name" id="name">
+
+                    <label class="block mb-1 text-xl font-bold">Message</label>
+                    <textarea class="mb-7 w-full border border-input-border bg-input" name="message" rows="10" cols="30">
+                    </textarea>
+
+                    <button class="flex justify-center gap-3 px-6 py-2 bg-theme text-white font-bold">
+                        Send it
+                    </button>
+                </div>
+
+                <div class="flex flex-col gap-2 justify-start pt-8 md:mx-8 mx-0">
+                    <span>555-565-1142</span>
+                    <span>john@example.com</span>
+                    <div class="flex gap-8 mt-8">
+                        <a href="https://twitter.com" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
